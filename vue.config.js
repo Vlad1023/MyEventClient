@@ -1,6 +1,6 @@
 const path = require('path'); 
 module.exports = {
-  publicPath: '/MyEvent/',
+  base: '/MyEvent/',
   lintOnSave: false,
   transpileDependencies: [
     'vuetify'
