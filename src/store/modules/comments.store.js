@@ -12,7 +12,7 @@ export default {
     },
     getters: {
         getLastNComments(state){
-            return (state.comments.sort((a, b) => b.dateAdded - a.dateAdded)).slice(0, state.n);
+            return (state.comments.sort((a, b) => a.dateAdded - b.dateAdded)).slice(0, state.n);
         }
     },
     mutations: {
