@@ -66,11 +66,12 @@
         </GmapMap>
       </v-col>
     </v-row>
+     <CommentsComponent :event = event />
   </div>
 </template>
 
 <script>
-
+import CommentsComponent from '@components/Comments.vue'
 export default {
   name: 'EventPage',
   props: {
@@ -97,7 +98,7 @@ export default {
     })
   },
   components: {
-
+  CommentsComponent
   }
 }
 </script>

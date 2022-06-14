@@ -19,6 +19,7 @@
         <v-row align="center">
           <v-col cols="6">
             <v-card-title>{{event.eventName}}</v-card-title>
+            <v-card-subtitle>Author: {{event.authorName}}</v-card-subtitle>
           </v-col>
           <v-col cols="6">
             <v-card-subtitle>{{event.pariticipantsIds.length}} participants</v-card-subtitle>
