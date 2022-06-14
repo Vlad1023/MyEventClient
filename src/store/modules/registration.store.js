@@ -43,8 +43,6 @@ export default {
                 .then(resp => {
                   const user = resp.data
                   commit('registration_success');
-                  commit('login/login_success', user, { root: true })
-                  localStorage.setItem('token', user.token);
                   resolve(resp);
                 })
                 .catch(err => {

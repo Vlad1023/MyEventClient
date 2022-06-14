@@ -114,11 +114,13 @@
         </v-alert>
       </v-col>
     </v-row>
+    <CommentsComponent :event = event />
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import CommentsComponent from '@components/Comments.vue'
 export default {
   name: 'EventPage',
   props: {
@@ -174,7 +176,7 @@ export default {
     })
   },
   components: {
-
+CommentsComponent
   },
   methods:{
     setPlace(place) {

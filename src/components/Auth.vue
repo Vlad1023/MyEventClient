@@ -115,16 +115,10 @@ export default {
           .then(() => {
               this.$store.dispatch("login/login", {Username: this.userName, Password: this.password})
               .then(() => {
-                  this.$toast.success("Registration successful", {
-                  position: "bottom-left",
-                  timeout: 3000,
-                  closeOnClick: true,
-                  closeButton: "button",
-                  icon: true,
-                  rtl: false
-                });
-              });
-              this.$router.push('/');
+                 this.$toast.success("Login successful");
+                this.$store.commit('login/changeLogInStatus', true);
+                this.$router.push('/');
+              })
           });
       }
     },
@@ -135,14 +129,8 @@ export default {
       if (this.$refs.loginForm.validate()) {
         this.$store.dispatch("login/login", {Username: this.loginUsername, Password: this.loginPassword})
         .then(() => {
-            this.$toast.success("Login successful", {
-            position: "bottom-left",
-            timeout: 3000,
-            closeOnClick: true,
-            closeButton: "button",
-            icon: true,
-            rtl: false
-          });
+          this.$toast.success("Login successful");
+          this.$store.commit('login/changeLogInStatus', true);
           this.$router.push('/');
         });
       }
